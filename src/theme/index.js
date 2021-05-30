@@ -1,0 +1,27 @@
+const theme = {
+  bgMain: '#121212',
+  bgPrimary: '#181c3a',
+  bgActive: '#252a4a',
+  bgInput: 'rgb(31, 31, 31)',
+  transparent: 'transparent',
+  colorPrimary: '#ff481c',
+  colorSecondary: '#a1a1a1',
+  colorWhite: '#ffffff',
+  colorYellow: '#f8b94b',
+  textGreen: '#9dd562',
+  textBlue: 'rgb(45, 129, 255)',
+  textGray: 'rgba(255, 255, 255, 0.6)',
+  colorOrange: '#ff4a21',
+  colorGrayLightest: '#f5f5f5',
+  colorBlack: '#000',
+  colorDarkGreen: '#09d395',
+  colorFooter: '#42434e',
+  bgBlue: 'rgba(45, 129, 255, 0.15)',
+  bgBlueHover: 'rgba(45, 129, 255, 0.2)',
+  bgLightBlue: 'rgb(45, 129, 255)',
+  bgLightBlueHover: 'rgba(45, 129, 255, 0.95)',
+  transparentBorder: 'rgba(255, 255, 255, 0.1)',
+  transparentBorderHover: 'rgba(255, 255, 255, 0.18)',
+};
+
+export default theme;

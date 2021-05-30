@@ -1,0 +1,52 @@
+.menu-wrapper {
+  li {
+    margin: 0px 20px 0px 0px;
+
+    &.active {
+      background-color: #252a4a;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      transition: all 0.12s ease-in-out 0s;
+      color: rgba(255, 255, 255, 0.5);
+      height: 40px;
+      font-size: 15px;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover,
+      &.menu-active {
+        color: rgba(255, 255, 255, 0.9);
+      }
+    }
+  }
+}
+
+.menu-wrapper.footer-menu {
+  flex-direction: column;
+
+  li {
+    margin: 0 0 12px;
+
+    a {
+      height: auto;
+    }
+  }
+}
+
+main {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden auto;
+
+  @media (min-width: 0px) and (max-width: 1268px) {
+    padding: 0;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    max-width: 100%;
+  }
+}
