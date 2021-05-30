@@ -30,7 +30,7 @@ const HeroItem = ({ item }) => {
 
 const Hero = ({ heroList }) => {
   return (
-    <HeroWrapper>
+    <HeroWrapper className="nft-scrollbar">
       {heroList.map((item, index) => {
         return <HeroItem key={`__key-${index.toString()}`} item={item} />;
       })}
