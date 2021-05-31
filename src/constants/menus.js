@@ -61,3 +61,36 @@ export const languageMenu = [
     to: '/pages/russia',
   },
 ];
+
+export const seller = [
+  {
+    src: 'https://images.rarible.com/?fit=outsize&n=-1&url=https%3A%2F%2Fipfs.rarible.com%2Fipfs%2FQmWZUEsyUgHVzdUrq13CcC2jmgkq4YeHaHRwCeAwgCKdZZ&w=100',
+    seller: 'Dikasso',
+    price: 5.65,
+  },
+  {
+    src: 'https://images.rarible.com/?fit=outsize&n=-1&url=https%3A%2F%2Fipfs.rarible.com%2Fipfs%2FQmXLbNfhbQc16vMczeZEiPktio9iAhXGirvJVqSmihQ5C2&w=100',
+    seller: 'satman',
+    price: 5.51,
+  },
+  {
+    src: 'https://images.rarible.com/?fit=outsize&n=-1&url=https%3A%2F%2Fipfs.rarible.com%2Fipfs%2FQmPFt9gkJCpaaxwKcGgGMBwUb4jVqGpGe9Pp6RxYoGsk2W&w=100',
+    seller: 'Lindsay Lohan',
+    price: 5,
+  },
+  {
+    src: 'https://images.rarible.com/?fit=outsize&n=-1&url=https%3A%2F%2Fipfs.rarible.com%2Fipfs%2FQmWZUEsyUgHVzdUrq13CcC2jmgkq4YeHaHRwCeAwgCKdZZ&w=100',
+    seller: 'Dikasso',
+    price: 5.65,
+  },
+  {
+    src: 'https://images.rarible.com/?fit=outsize&n=-1&url=https%3A%2F%2Fipfs.rarible.com%2Fipfs%2FQmXLbNfhbQc16vMczeZEiPktio9iAhXGirvJVqSmihQ5C2&w=100',
+    seller: 'satman',
+    price: 5.51,
+  },
+  {
+    src: 'https://images.rarible.com/?fit=outsize&n=-1&url=https%3A%2F%2Fipfs.rarible.com%2Fipfs%2FQmPFt9gkJCpaaxwKcGgGMBwUb4jVqGpGe9Pp6RxYoGsk2W&w=100',
+    seller: 'Lindsay Lohan',
+    price: 5,
+  },
+];

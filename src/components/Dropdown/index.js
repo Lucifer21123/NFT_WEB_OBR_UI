@@ -1,120 +1,152 @@
-import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
-
+import React, { useState, useEffect, useRef } from 'react';
 import theme from '../../theme';
 
-const DropdownWrapper = styled.div`
+import styled from 'styled-components';
+
+const StyledDropDown = styled.div`
   position: relative;
-
-  .dropdown-handler {
-    width: auto;
-    height: auto;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.35s ease-in-out;
-
-    &.active {
-      background-color: ${theme.bgBlue};
-    }
+  width: auto;
+`;
+const StyledDropDownDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  color: white;
+  padding: 16px 0;
+  top: 55px;
+  right: 0;
+  position: absolute;
+  border-radius: 8px;
+  background-color: ${theme.bgInput};
+  border: 1px solid ${theme.transparentBorder};
+  display: ${({ hide }) => (hide ? 'block' : 'none')};
+  width: 50%;
+  min-width: 140px;
+  max-height: 200px;
+  overflow: auto;
+`;
+const StyledDropDownHeader = styled.div`
+  cursor: pointer;
+  h3 {
+    color: ${theme.textBlue};
+    font-weight: bold;
   }
-
-  .dropdown-content {
-    top: calc(100% + 5px);
-    left: 0;
-    right: auto;
-    display: inline-block;
-    min-width: 200px;
+  height: 48px;
+  padding: 0 15px;
+  padding-bottom: 10px;
+  margin-right: 12px;
+  text-align: left;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  img {
+    height: 28px;
+    margin-right: 12px;
+  }
+  :after {
+    border: 2px solid white;
+    border-radius: 2px;
+    border-right: 0;
+    border-top: 0;
+    content: ' ';
+    display: block;
+    margin-top: -0.5em;
+    pointer-events: none;
     position: absolute;
-    border-radius: 6px;
-    background-color: ${theme.bgInput};
-    z-index: 99;
+    top: 50%;
+    transform: rotate(-45deg);
+    transform-origin: center;
+    height: 10px;
+    width: 10px;
+    top: 25px;
+    right: 10px;
+    transition: border-color 0.15s ease-in-out;
   }
 
-  /* If direction prop set to right */
-  &.right {
-    .dropdown-content {
-      left: auto;
-      right: 0;
-    }
-
-    .dropdown-handler {
-      margin-left: auto;
-    }
+  &:hover {
   }
 `;
 
-const Dropdown = ({
-  className,
-  handler,
-  content,
-  direction,
-  handlerWidth = 24,
-  handlerHeight = 24,
-}) => {
-  // Popover State
-  const [state, setState] = useState(false);
-
-  // Add all classs to an array
-  const addAllClasses = ['dropdown-wrapper'];
-
-  // className prop checking
-  if (className) {
-    addAllClasses.push(className);
+const StyledDropDownItemDiv = styled.div`
+  margin: 0 12px;
+  padding: 8px 12px;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  img {
+    height: 28px;
+    margin-right: 12px;
   }
 
-  // Add direction class on popover content
-  if (direction) {
-    addAllClasses.push(direction);
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.05);
   }
 
-  // Toggle Popover content
-  const handleToggle = (e) => {
-    e.stopPropagation();
-    setState((state) => !state);
-  };
+  .check-mark {
+    display: ${(props) => (props.isSelect ? 'inline' : 'none')};
+    margin-bottom: 6px;
+    transform: rotate(45deg);
+    height: 12px;
+    width: 8px;
+    border-bottom: 2px solid ${theme.textBlue};
+    border-right: 2px solid ${theme.textBlue};
+  }
+`;
+const Dropdown = ({ list, label, click }) => {
+  const [current, setCurrent] = useState({});
+  const [hide, setHide] = useState(false);
+  const dropMenuRef = useRef(null);
 
-  // Handle document click
-  const handleDocumentClick = (e) => {
-    e.stopPropagation();
-    if (state) {
-      handleToggle(e);
-    }
-  };
-
-  // Handle window event listener
   useEffect(() => {
-    window.addEventListener('click', handleDocumentClick);
+    setCurrent(list[0]);
+  }, []);
+
+  const handleClickOutside = (e) => {
+    if (dropMenuRef.current && dropMenuRef.current.contains(e.target)) {
+      return;
+    }
+    setHide(false);
+  };
+
+  useEffect(() => {
+    if (hide) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
     return () => {
-      window.removeEventListener('click', handleDocumentClick);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
-  });
+  }, [hide]);
 
   return (
-    <DropdownWrapper className={addAllClasses.join(' ')}>
-      <span
-        className={`dropdown-handler ${state ? 'active' : ''}`}
-        onClick={handleToggle}
-        style={{
-          width: handlerWidth,
-          height: handlerHeight,
-        }}
-      >
-        {handler}
-      </span>
-      {state && (
-        <div className="dropdown-content">
-          {content && (
-            <div className="inner-wrap" onClick={handleToggle}>
-              {content}
-            </div>
-          )}
-        </div>
-      )}
-    </DropdownWrapper>
+    <StyledDropDown>
+      <StyledDropDownHeader onClick={() => setHide(!hide)}>
+        <h3>{label}</h3>
+      </StyledDropDownHeader>
+      <StyledDropDownDiv ref={dropMenuRef} hide={hide}>
+        {list.map((item, index) => {
+          return (
+            <StyledDropDownItemDiv
+              isSelect={current.id === item.id}
+              key={`__key-${index.toString()}`}
+              onClick={() => {
+                setHide(false);
+                setCurrent(item);
+                click(item);
+              }}
+            >
+              {item.label}
+              <span className="check-mark"></span>
+            </StyledDropDownItemDiv>
+          );
+        })}
+      </StyledDropDownDiv>
+    </StyledDropDown>
   );
 };
 

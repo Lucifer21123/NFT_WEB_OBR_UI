@@ -60,6 +60,8 @@ export const HeroBackground = styled.div`
 `;
 
 export const TopCustomerWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   h3 {
     display: flex;
   }
