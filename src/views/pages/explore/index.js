@@ -6,12 +6,14 @@ import Hero from './hero';
 import { heroList } from '../../../constants/heros';
 import { DashboardWrapper } from './styles';
 import TopCustomer from './topcustomer';
+import LiveAuctions from './liveauctions';
 
 const Dashboard = ({ tokenData, setTokenData }) => {
   return (
     <DashboardWrapper>
       <Hero heroList={heroList} />
       <TopCustomer />
+      <LiveAuctions />
     </DashboardWrapper>
   );
 };

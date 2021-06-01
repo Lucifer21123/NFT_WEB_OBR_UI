@@ -3,10 +3,10 @@ import React from 'react';
 import DropDown from '../../../components/Dropdown';
 import { TopCustomerWrapper } from './styles';
 import {
-  raribleMenus,
-  communityMenus,
   languageMenu,
   seller,
+  sellersDrop,
+  daysDrop,
 } from '../../../constants/menus';
 
 import SellerCellGrid from '../../../components/TopSellerGrid';
@@ -19,9 +19,9 @@ const TopCustomer = () => {
     <TopCustomerWrapper>
       <h3>
         <b>Top</b>
-        <DropDown list={languageMenu} label="sellers" click={clickHandle} />
+        <DropDown list={sellersDrop} click={clickHandle} />
         in
-        <DropDown list={languageMenu} label="1 day" click={clickHandle} />
+        <DropDown list={daysDrop} click={clickHandle} />
       </h3>
       <SellerCellGrid data={seller}></SellerCellGrid>
     </TopCustomerWrapper>

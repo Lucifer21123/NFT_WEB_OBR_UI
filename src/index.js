@@ -1,10 +1,9 @@
 /* eslint-disable global-require */
 import './assets/css/vendor/bootstrap.min.css';
 import './assets/css/vendor/bootstrap.rtl.only.min.css';
-import {
-  defaultColor,
-  themeColorStorageKey,
-} from './constants/defaultValues';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { defaultColor, themeColorStorageKey } from './constants/defaultValues';
 
 const color = defaultColor;
 

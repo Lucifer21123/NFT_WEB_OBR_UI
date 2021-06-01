@@ -62,6 +62,16 @@ export const HeroBackground = styled.div`
 export const TopCustomerWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 18px;
+  h3 {
+    display: flex;
+  }
+`;
+
+export const LiveAuctionsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 28px 0px 0px;
   h3 {
     display: flex;
   }

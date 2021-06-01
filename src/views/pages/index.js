@@ -4,37 +4,6 @@ import { connect } from 'react-redux';
 
 import AppLayout from '../../layout/AppLayout';
 
-const coins = [
-  'BUSD',
-  'USDT',
-  'USDC',
-  'BTCB',
-  'BNB',
-  'ETH',
-  'DAI',
-  'SXP',
-  'DOT',
-  'BETH',
-  'LINK',
-  'XVS',
-  'ADA',
-  'LTC',
-  'XRP',
-  'FIL',
-  'BCH',
-];
-const isCoin = (value) => {
-  try {
-    return coins.includes(value);
-  } catch {
-    return false;
-  }
-};
-
-const isInteger = (value) => {
-  return /^\d+$/.test(value);
-};
-
 const Dashboard = React.lazy(() => import('./explore'));
 
 const App = ({ match }) => {

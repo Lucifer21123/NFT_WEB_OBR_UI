@@ -126,7 +126,7 @@ const Dropdown = ({ list, label, click }) => {
   return (
     <StyledDropDown>
       <StyledDropDownHeader onClick={() => setHide(!hide)}>
-        <h3>{label}</h3>
+        <h3>{current.label}</h3>
       </StyledDropDownHeader>
       <StyledDropDownDiv ref={dropMenuRef} hide={hide}>
         {list.map((item, index) => {
