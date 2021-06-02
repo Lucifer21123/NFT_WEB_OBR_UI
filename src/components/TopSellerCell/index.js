@@ -5,8 +5,6 @@ const SellerCellArea = styled.div`
   display: flex;
   flex-direction: row nowrap;
   width: 100%;
-  width: 255px;
-  height: 48px;
   padding: -15px 0px 5px 15px;
   margin-bottom: 20px;
   & .number {
