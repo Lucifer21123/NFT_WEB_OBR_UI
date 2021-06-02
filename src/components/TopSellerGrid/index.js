@@ -14,6 +14,7 @@ const TopSellerContainer = styled.div`
 const TopSellerGridArea = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
 `;
 
 const SellerColumn = ({ data }) => {

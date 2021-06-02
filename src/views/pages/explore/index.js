@@ -7,6 +7,7 @@ import { heroList } from '../../../constants/heros';
 import { DashboardWrapper } from './styles';
 import TopCustomer from './topcustomer';
 import LiveAuctions from './liveauctions';
+import HotCollections from './hotcollections';
 
 const Dashboard = ({ tokenData, setTokenData }) => {
   return (
@@ -14,6 +15,7 @@ const Dashboard = ({ tokenData, setTokenData }) => {
       <Hero heroList={heroList} />
       <TopCustomer />
       <LiveAuctions />
+      <HotCollections></HotCollections>
     </DashboardWrapper>
   );
 };

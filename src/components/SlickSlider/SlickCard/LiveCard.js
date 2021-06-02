@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const LiveCardArea = styled.div`
-  width: 285px;
-  height: 400px;
   background: rgb(18, 18, 18);
   padding: 18px;
   border-radius: 16px;
@@ -15,6 +13,8 @@ const LiveCardArea = styled.div`
   min-height: 0px;
   min-width: 0px;
   max-width: 100%;
+  margin-left: 15px;
+  margin-right: 15px;
   @media (min-width: 981px) {
     padding: 22px 24px;
   }
@@ -53,8 +53,8 @@ const ImageBody = styled.div`
 `;
 
 const ImageCard = styled.div`
-  width: 220px;
-  height: 2020px;
+  width: 100%;
+  height: 202px;
   display: flex;
   align-item: center;
   flex-grow: 1;

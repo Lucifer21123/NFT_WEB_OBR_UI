@@ -348,3 +348,48 @@ export const liveData = [
     comment: 14,
   },
 ];
+
+export const hotdata = [
+  {
+    src: 'https://images.rarible.com/?fit=outsize&n=-1&url=https%3A%2F%2Fipfs.rarible.com%2Fipfs%2FQmcLwMJhQsiAjvmGffeFMBs6Z4wkkFbYgT5s8LMa5EVvMf&h=220',
+    title: 'Foyd Mayweather Jr',
+    tag: 'ERC-721',
+    badge:
+      'https://images.rarible.com/?fit=outsize&n=-1&url=https%3A%2F%2Fipfs.rarible.com%2Fipfs%2FQmd8yBPiVVCS1egGTnmnrSsKK9s9iNQdrPtSy86DiwYvWx&w=240',
+  },
+  {
+    src: 'https://images.rarible.com/?fit=outsize&n=-1&url=https%3A%2F%2Fipfs.rarible.com%2Fipfs%2FQmYxkMe9TwzSTrnSKL3Tbs9q2zN9kcmsrXqpSphC1tVkPt&h=220',
+    title: 'Foyd Mayweather Jr',
+    tag: 'ERC-721',
+    badge:
+      'https://images.rarible.com/?fit=outsize&n=-1&url=https%3A%2F%2Fipfs.rarible.com%2Fipfs%2FQmd8yBPiVVCS1egGTnmnrSsKK9s9iNQdrPtSy86DiwYvWx&w=240',
+  },
+  {
+    src: 'https://images.rarible.com/?fit=outsize&n=-1&url=https%3A%2F%2Fipfs.rarible.com%2Fipfs%2FQmcLwMJhQsiAjvmGffeFMBs6Z4wkkFbYgT5s8LMa5EVvMf&h=220',
+    title: 'Foyd Mayweather Jr',
+    tag: 'ERC-721',
+    badge:
+      'https://images.rarible.com/?fit=outsize&n=-1&url=https%3A%2F%2Fipfs.rarible.com%2Fipfs%2FQmd8yBPiVVCS1egGTnmnrSsKK9s9iNQdrPtSy86DiwYvWx&w=240',
+  },
+  {
+    src: 'https://images.rarible.com/?fit=outsize&n=-1&url=https%3A%2F%2Fipfs.rarible.com%2Fipfs%2FQmYxkMe9TwzSTrnSKL3Tbs9q2zN9kcmsrXqpSphC1tVkPt&h=220',
+    title: 'Foyd Mayweather Jr',
+    tag: 'ERC-721',
+    badge:
+      'https://images.rarible.com/?fit=outsize&n=-1&url=https%3A%2F%2Fipfs.rarible.com%2Fipfs%2FQmd8yBPiVVCS1egGTnmnrSsKK9s9iNQdrPtSy86DiwYvWx&w=240',
+  },
+  {
+    src: 'https://images.rarible.com/?fit=outsize&n=-1&url=https%3A%2F%2Fipfs.rarible.com%2Fipfs%2FQmcLwMJhQsiAjvmGffeFMBs6Z4wkkFbYgT5s8LMa5EVvMf&h=220',
+    title: 'Foyd Mayweather Jr',
+    tag: 'ERC-721',
+    badge:
+      'https://images.rarible.com/?fit=outsize&n=-1&url=https%3A%2F%2Fipfs.rarible.com%2Fipfs%2FQmd8yBPiVVCS1egGTnmnrSsKK9s9iNQdrPtSy86DiwYvWx&w=240',
+  },
+  {
+    src: 'https://images.rarible.com/?fit=outsize&n=-1&url=https%3A%2F%2Fipfs.rarible.com%2Fipfs%2FQmYxkMe9TwzSTrnSKL3Tbs9q2zN9kcmsrXqpSphC1tVkPt&h=220',
+    title: 'Foyd Mayweather Jr',
+    tag: 'ERC-721',
+    badge:
+      'https://images.rarible.com/?fit=outsize&n=-1&url=https%3A%2F%2Fipfs.rarible.com%2Fipfs%2FQmd8yBPiVVCS1egGTnmnrSsKK9s9iNQdrPtSy86DiwYvWx&w=240',
+  },
+];
