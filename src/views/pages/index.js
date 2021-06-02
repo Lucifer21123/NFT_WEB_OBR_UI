@@ -5,7 +5,8 @@ import { connect } from 'react-redux';
 import AppLayout from '../../layout/AppLayout';
 
 const Dashboard = React.lazy(() => import('./explore'));
-
+const Create = React.lazy(() => import('./create'));
+const Connect = React.lazy(() => import('./connect'));
 const App = ({ match }) => {
   return (
     <AppLayout>
@@ -20,6 +21,14 @@ const App = ({ match }) => {
             <Route
               path={`${match.url}/dashboard`}
               render={(props) => <Dashboard {...props} />}
+            />
+            <Route
+              path={`${match.url}/create`}
+              render={(props) => <Create {...props} />}
+            />
+            <Route
+              path={`${match.url}/connect`}
+              render={(props) => <Connect {...props} />}
             />
 
             <Route

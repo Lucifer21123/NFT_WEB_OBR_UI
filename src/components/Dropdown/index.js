@@ -132,7 +132,7 @@ const Dropdown = ({ list, label, click }) => {
         {list.map((item, index) => {
           return (
             <StyledDropDownItemDiv
-              isSelect={current.id === item.id}
+                     isSelect={current.id === item.id}
               key={`__key-${index.toString()}`}
               onClick={() => {
                 setHide(false);
