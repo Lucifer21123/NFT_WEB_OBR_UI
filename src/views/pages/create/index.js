@@ -10,7 +10,7 @@ import {
   SubContainer,
 } from './style';
 import { NFTText } from '../../../components/styles';
-import CreateCard from '../../../components/CreateCard';
+import { CreateCard } from '../../../components/CreateCard';
 const Create = ({ tokenData, setTokenData }) => {
   return (
     <Container>
@@ -36,9 +36,8 @@ const Create = ({ tokenData, setTokenData }) => {
           <NFTText
             fontSize="36px"
             fontWeight="900"
-            margin="16px 0 0"
+            margin="20px 0 30px 0"
             align="left"
-            fontFamily="Helvetica"
           >
             Create collectible
           </NFTText>
@@ -52,7 +51,7 @@ const Create = ({ tokenData, setTokenData }) => {
             "Multiple" if you want to sell one collectible multiple times
           </NFTText>
           <CardGroup>
-            <CreateCard text="Single" ribbon="Timed acutions 🔥" />
+            <CreateCard text="Single" ribbon="Timed acutions 🔥" href="/asdf" />
             <CreateCard text="Multiple" />
           </CardGroup>
           <NFTText color="rgba(255,255,255,0.5)" margin="32px 0 0" align="left">

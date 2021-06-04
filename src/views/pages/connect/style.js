@@ -3,9 +3,18 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
+  background: rgb(18, 18, 18);
+  min-height: 100vh;
 `;
 export const LeftFrom = styled.div`
   width: 380px;
+  background-image: url('https://rarible.com/static/3bd3dce3665cb2869ec24c0c38a8e086.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  padding: 32px;
+  justify-content: space-between;
 `;
 export const RightForm = styled.div``;
 

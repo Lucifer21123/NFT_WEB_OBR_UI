@@ -26,8 +26,16 @@ const Header = () => {
         <SearchForm />
         <HeaderMenu />
         <div className="header-buttons">
-          <Button variant="blue">Create</Button>
-          <Button variant="transparent">Connect wallet</Button>
+          <Button variant="blue">
+            <NavLink to="/pages/create" className="logo-wrapper">
+              Create
+            </NavLink>
+          </Button>
+          <Button variant="transparent">
+            <NavLink to="/pages/token/:id" className="logo-wrapper">
+              Connect Wallet
+            </NavLink>
+          </Button>
         </div>
       </FlexLayout>
     </HeaderWrapper>

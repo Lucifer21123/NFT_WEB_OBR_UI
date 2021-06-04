@@ -16,6 +16,7 @@ const CustomCardButtom = styled.div`
     cursor:pointer;
     border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
+    outline:none;
     &:hover{
         border-color: rgba(255, 255, 255, 0.2);
     }
@@ -49,13 +50,13 @@ const RibbonButton = styled.button`
   right: -13px;
   top: -18px;
   position: absolute;
+  outline: none;
   border-radius: 32px;
   display: inline-flex;
   -webkit-box-align: center;
   align-items: center;
   -webkit-box-pack: center;
   justify-content: center;
-  user-select: none;
   height: 32px;
   padding-left: 16px;
   border: 2px solid transparent;
@@ -70,22 +71,22 @@ const RibbonButton = styled.button`
   }
 `;
 
-const CreateCard = (props) => {
+export const CreateCard = (props) => {
   return (
     <CustomCard>
-      <CustomCardButtom>
-        <ImageBar src="https://images.rarible.com/?fit=outsize&n=-1&url=https%3A%2F%2Fipfs.rarible.com%2Fipfs%2FQmXLbNfhbQc16vMczeZEiPktio9iAhXGirvJVqSmihQ5C2&w=100"></ImageBar>
-        <span>{props.text}</span>
-        {props.ribbon ? (
-          <RibbonButton>
-            <span>{props.ribbon}</span>
-          </RibbonButton>
-        ) : (
-          <></>
-        )}
-      </CustomCardButtom>
+      <a>
+        <CustomCardButtom>
+          <ImageBar src="https://rarible.com/static/2a78e39400f51f1dbeba13832f421092.png"></ImageBar>
+          <span>{props.text}</span>
+          {props.ribbon ? (
+            <RibbonButton>
+              <span>{props.ribbon}</span>
+            </RibbonButton>
+          ) : (
+            <></>
+          )}
+        </CustomCardButtom>
+      </a>
     </CustomCard>
   );
 };
-
-export default CreateCard;

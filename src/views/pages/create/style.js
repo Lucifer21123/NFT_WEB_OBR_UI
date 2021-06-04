@@ -10,8 +10,6 @@ export const Container = styled.div`
   display: flex;
   flex-basis: auto;
   flex-direction: column;
-  flex-shrink: 0;
-  min-height: 0px;
 `;
 export const SubContainer = styled.div`
   max-width: 580px;
@@ -43,8 +41,9 @@ export const CustomButton = styled.div`
     text-decoration: none;
     font-weight: 700;
     color: rgba(255, 255, 255, 0.8);
+    font-family: Arial;
   }
-  &:hover {
+  & :hover {
     color: rgb(255, 255, 255);
   }
 `;

@@ -10,11 +10,12 @@ import {
 } from './style';
 import { CustomButton, CustomSvg } from '../create/style';
 import { NFTText } from '../../../components/styles';
-import WalletCard from '../../../components/WalletCard';
+import { WalletCard } from '../../../components/WalletCard';
+import { cardlist } from '../../../constants/cardlist';
 const Connect = () => {
   return (
     <Container>
-      <LeftFrom></LeftFrom>
+      <LeftFrom />
       <RightForm>
         <ConnectWrapper>
           <ConnectBody>
@@ -38,7 +39,7 @@ const Connect = () => {
             <NFTText
               fontSize="36px"
               fontWeight="900"
-              margin="16px 0 0"
+              margin="20px 0 10px 0"
               align="left"
               fontFamily="Helvetica"
             >
@@ -57,20 +58,17 @@ const Connect = () => {
               <WhatButton>What is a waller?</WhatButton>
             </NFTText>
             <WalletCardGroup>
-              <WalletCard
-                text="Simple"
-                ribbon="Simple"
-                header="adsfasf"
-                context="Connect wirh your Google"
-              />
-              <WalletCard
-                text="Credit Card Flow"
-                ribbon="Credot Card Flow"
-                header="adsfasf"
-                context="asdfasdf"
-              />
-              <WalletCard context="asdfasdf" />
-              <WalletCard header="show more" />
+              {cardlist.map((value, key) => {
+                return (
+                  <WalletCard
+                    key={key + 1}
+                    context={value.text}
+                    header={value.header}
+                    text={value.ribbon}
+                    icon={value.icon}
+                  />
+                );
+              })}
             </WalletCardGroup>
 
             <NFTText
