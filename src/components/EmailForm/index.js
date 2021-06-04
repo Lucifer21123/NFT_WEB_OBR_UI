@@ -6,6 +6,7 @@ import { FlexLayout } from '../styles';
 import theme from '../../theme';
 
 const EmailFormWrapper = styled.div`
+  width: 100%;
   display: flex;
   flex-grow: 1;
   transition: all 0.12s ease-in-out 0s;

@@ -33,14 +33,7 @@ const Create = ({ tokenData, setTokenData }) => {
             </CustomSvg>
             <span>Go back</span>
           </CustomButton>
-          <NFTText
-            fontSize="36px"
-            fontWeight="900"
-            margin="20px 0 30px 0"
-            align="left"
-          >
-            Create collectible
-          </NFTText>
+          <span className="headertext">Create collectible</span>
           <NFTText
             color="rgba(255,255,255,0.5)"
             margin="16px 0 0"

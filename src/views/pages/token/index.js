@@ -115,15 +115,18 @@ const Token = (props) => {
           <FootBody>
             <FooterText>
               <FooterLeft>
-                <NFTText
-                  color="rgba(255, 255, 255, 0.5)"
-                  margin="5px 0px 0px 0px"
-                  fontSize="14px"
-                  fontWeight="900"
-                  align="left"
-                >
-                  Minimum bid
-                </NFTText>
+                <div className="bidheader">
+                  <NFTText
+                    color="rgba(255, 255, 255, 0.5)"
+                    margin="5px 0px 0px 0px"
+                    fontSize="14px"
+                    fontWeight="900"
+                    align="left"
+                  >
+                    Minimum bid
+                  </NFTText>
+                </div>
+
                 <NFTText
                   margin="4px"
                   fontSize="20px"
@@ -141,10 +144,96 @@ const Token = (props) => {
                   $263.20
                 </NFTText>
               </FooterLeft>
-              <FooterLeft></FooterLeft>
-              <FooterRight></FooterRight>
+
+              <FooterRight>
+                <div className="bidheader">
+                  <NFTText
+                    color="rgba(255, 255, 255, 0.5)"
+                    margin="5px 0px 0px 0px"
+                    fontSize="14px"
+                    fontWeight="900"
+                    align="left"
+                  >
+                    Auction ends in
+                  </NFTText>
+                </div>
+                <div className="bidbody">
+                  <div className="bidtime">
+                    <NFTText
+                      margin="4px"
+                      fontSize="20px"
+                      fontWeight="900"
+                      align="left"
+                    >
+                      5
+                    </NFTText>
+                    <NFTText
+                      color="rgba(255, 255, 255, 0.5)"
+                      fontSize="14px"
+                      fontWeight="900"
+                      align="left"
+                    >
+                      Days
+                    </NFTText>
+                  </div>
+                  <div className="bidtime">
+                    <NFTText
+                      margin="4px"
+                      fontSize="20px"
+                      fontWeight="900"
+                      align="left"
+                    >
+                      9
+                    </NFTText>
+                    <NFTText
+                      color="rgba(255, 255, 255, 0.5)"
+                      fontSize="14px"
+                      fontWeight="900"
+                      align="left"
+                    >
+                      Hours
+                    </NFTText>
+                  </div>
+                  <div className="bidtime">
+                    <NFTText
+                      margin="4px"
+                      fontSize="20px"
+                      fontWeight="900"
+                      align="left"
+                    >
+                      0
+                    </NFTText>
+                    <NFTText
+                      color="rgba(255, 255, 255, 0.5)"
+                      fontSize="14px"
+                      fontWeight="900"
+                      align="left"
+                    >
+                      Minutes
+                    </NFTText>
+                  </div>
+                  <div className="bidtime">
+                    <NFTText
+                      margin="4px"
+                      fontSize="20px"
+                      fontWeight="900"
+                      align="left"
+                    >
+                      5
+                    </NFTText>
+                    <NFTText
+                      color="rgba(255, 255, 255, 0.5)"
+                      fontSize="14px"
+                      fontWeight="900"
+                      align="left"
+                    >
+                      Second
+                    </NFTText>
+                  </div>
+                </div>
+              </FooterRight>
             </FooterText>
-            <Button variant="transparent">Place a bid</Button>
+            <Button variant="lightBlue">Place a bid</Button>
           </FootBody>
         </DetailFooter>
       </DetailItem>

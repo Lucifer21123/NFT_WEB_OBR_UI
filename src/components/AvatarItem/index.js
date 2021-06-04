@@ -81,6 +81,7 @@ export const CreaterText = styled.div`
     font-weight: 400;
     line-height: 1.38;
     color: rgb(255, 255, 255);
+    font-weight: 700;
   }
   & a {
     text-decoration: none;

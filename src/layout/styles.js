@@ -4,14 +4,16 @@ import theme from '../theme';
 export const HeaderWrapper = styled.header`
   z-index: 100;
   position: sticky;
+  top: 0;
   width: 100%;
   margin: 0px;
-  padding: 0px;
+  padding: 16px 0px;
   display: flex;
+  flex-direction: column;
+  background-color: ${theme.bgMain};
+  border-bottom: 1px solid ${theme.transparentBorder};
 
   .header-container {
-    border-bottom: 1px solid ${theme.transparentBorder};
-
     > :not(:last-child) {
       margin-right: 24px;
     }
@@ -28,18 +30,7 @@ export const HeaderWrapper = styled.header`
 `;
 
 export const FooterWrapper = styled.footer`
+  max-width: 1500px;
   border-top: 1px solid ${theme.transparentBorder};
   padding-top: 64px;
-
-  .primary-footer {
-    display: flex;
-
-    .email-form-container {
-      width: 30%;
-    }
-
-    .rarible-menu {
-      width: 20%;
-    }
-  }
 `;

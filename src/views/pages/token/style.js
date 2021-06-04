@@ -49,6 +49,7 @@ export const Total = styled.div`
   -webkit-box-flex: 1;
   margin: 0px;
   padding: 28px 0px 0px 20px;
+  overflow-y: scroll;
 `;
 
 export const Content = styled.div`
@@ -82,16 +83,14 @@ export const SaleText = styled.div`
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.1);
   padding: 12px 22px;
-  display: flex;
-  flex-direction: column;
   margin: 0px 0px 16px;
   font-size: 14px;
   max-width: 100%;
-  &.back-text{
+  & .back-text {
     color: rgba(255, 255, 255, 0.9);
   }
-  &.back-text{
-    rgba(255, 255, 255, 0.7);
+  & .back-text {
+    color: rgba(255, 255, 255, 0.7);
   }
 `;
 export const Collection = styled.div`
@@ -149,4 +148,13 @@ export const FooterLeft = styled.div`
 export const FooterRight = styled.div`
   display: flex;
   flex-direction: column;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0px 0px 0px 10px;
+  & .bidbody {
+    display: flex;
+    flex-direction: row;
+    & .bidtime {
+      margin-right: 10px;
+    }
+  }
 `;

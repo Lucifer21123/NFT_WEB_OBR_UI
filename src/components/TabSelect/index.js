@@ -11,13 +11,20 @@ const Tabstyle = styled.div`
   flex-direction: row;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   width: auto;
+  height: 50px;
   overflow: hidden;
   max-width: 100%;
-  margin: 0px 0px 0px 0px;
+
   & button {
     outline: none;
     background: transparent;
     border: none;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 20.7px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
   }
 `;
 export const TabSelect = () => {
@@ -25,7 +32,7 @@ export const TabSelect = () => {
   const tabList = [
     {
       name: 'tab1',
-      label: 'Tab 1',
+      label: 'Bids',
       content: (
         <svg
           viewBox="0 0 12 16"
@@ -43,7 +50,7 @@ export const TabSelect = () => {
     },
     {
       name: 'tab2',
-      label: 'Tab 2',
+      label: 'Details',
       content: (
         <>
           <AvatarItem header="owner" text="mikeshapesart"></AvatarItem>
@@ -54,7 +61,7 @@ export const TabSelect = () => {
     },
     {
       name: 'tab3',
-      label: 'Tab 3',
+      label: 'History',
       content: (
         <AvatarEthItem header="owner" text="mikeshapesart"></AvatarEthItem>
       ),

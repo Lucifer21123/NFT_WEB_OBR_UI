@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-const CardStyle = styled.div`
+const BidStyle = styled.div`
   inset: 0px;
   z-index: 1;
   height: 100%;
@@ -14,13 +14,13 @@ const CardStyle = styled.div`
   display: flex;
   flex-direction: column;
 `;
-export const LikeCard = (props) => {
+export const NotFoundBid = (props) => {
   return (
-    <CardStyle>
+    <BidStyle>
       <div className="iconstyle"></div>
       <div className="imagestyle"></div>
       <div className="headerstyle"></div>
       <div className="description"></div>
-    </CardStyle>
+    </BidStyle>
   );
 };

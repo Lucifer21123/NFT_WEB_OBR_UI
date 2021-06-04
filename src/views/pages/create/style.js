@@ -20,6 +20,22 @@ export const ContainerBody = styled.div`
   padding-bottom: 48px;
   padding-left: 32px;
   padding-right: 32px;
+  & .headertext {
+    font-size: 36px;
+    font-weight: 900;
+    margin: 20px 0 30px 0;
+    text-align: left;
+  }
+  @media only screen and (min-width: 981px) {
+    .herdertext {
+      font-size: 36px;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .herdertext {
+      font-size: 32px;
+    }
+  }
 `;
 
 export const CustomButton = styled.div`

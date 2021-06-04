@@ -90,7 +90,7 @@ export const CreaterText = styled.div`
 `;
 export const SpanText = styled.div`
   text-decoration: none;
-  ont-size: 15px;
+  font-size: 15px;
   line-height: 20.7px;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.5);

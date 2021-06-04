@@ -13,7 +13,7 @@ const StyledDropDownDiv = styled.div`
   z-index: 9999;
   color: white;
   padding: 16px 0;
-  top: 55px;
+  bottom: 55px;
   right: 0;
   position: absolute;
   border-radius: 8px;

@@ -56,3 +56,34 @@ export const Content = styled.div`
   display: flex;
   flex-flow: column;
 `;
+export const Pofilewrapper = styled.div`
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  & .wrapper {
+    display: flex;
+    flex-flow: row;
+    & span {
+      font-size: 28px;
+      line-height: 33.6px;
+      font-weight: 900;
+      text-align: center;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    & button {
+      width: auto;
+      padding: 0px;
+      background: transparent;
+      border: none;
+    }
+  }
+  & .buttonwrapper {
+    display: flex;
+    flex-flow: row;
+  }
+`;
+export const Cardwrapper = styled.div`
+  display: flex;
+  flex-flow: column;
+`;
