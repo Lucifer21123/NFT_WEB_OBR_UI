@@ -34,31 +34,44 @@ const Footer = () => {
           </Col>
           <Col xl={8} lg={12}>
             <Row>
-              <Col xs={4}>
-                <FlexLayout
-                  direction="column"
-                  className="rarible-menu"
-                  align="flex-start"
-                >
-                  <NFTText fontSize="18px" fontWeight="900" margin="0 0 16px 0">
-                    Rarible
-                  </NFTText>
-                  <FooterMenu menus={raribleMenus} />
-                </FlexLayout>
+              <Col sm={8} className="mb-5">
+                <Row>
+                  <Col>
+                    <FlexLayout
+                      direction="column"
+                      className="rarible-menu"
+                      align="flex-start"
+                    >
+                      <NFTText
+                        fontSize="18px"
+                        fontWeight="900"
+                        margin="0 0 16px 0"
+                      >
+                        Rarible
+                      </NFTText>
+                      <FooterMenu menus={raribleMenus} />
+                    </FlexLayout>
+                  </Col>
+                  <Col>
+                    <FlexLayout
+                      direction="column"
+                      className="rarible-menu"
+                      align="flex-start"
+                    >
+                      <NFTText
+                        fontSize="18px"
+                        fontWeight="900"
+                        margin="0 0 16px 0"
+                      >
+                        Community
+                      </NFTText>
+                      <FooterMenu menus={communityMenus} />
+                    </FlexLayout>
+                  </Col>
+                </Row>
               </Col>
-              <Col xs={4}>
-                <FlexLayout
-                  direction="column"
-                  className="rarible-menu"
-                  align="flex-start"
-                >
-                  <NFTText fontSize="18px" fontWeight="900" margin="0 0 16px 0">
-                    Community
-                  </NFTText>
-                  <FooterMenu menus={communityMenus} />
-                </FlexLayout>
-              </Col>
-              <Col xs={4}>
+
+              <Col sm={4}>
                 <FlexLayout
                   direction="column"
                   className="rarible-menu"
@@ -73,12 +86,9 @@ const Footer = () => {
             </Row>
           </Col>
         </Row>
-        <FlexLayout
-          width="100%"
-          justify="space-between"
-          align="flex-start"
-          className="primary-footer"
-        ></FlexLayout>
+        <Row>
+          <FlexLayout></FlexLayout>
+        </Row>
       </FlexLayout>
     </FooterWrapper>
   );

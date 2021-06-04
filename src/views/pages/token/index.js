@@ -24,7 +24,7 @@ import { NFTText } from '../../../components/styles';
 import { Button } from '../../../components/Button';
 import { AvatarItem } from '../../../components/AvatarItem';
 import { TabSelect } from '../../../components/TabSelect';
-import { IconButton } from '../../../components/IconButton';
+import { CircleButton } from '../../../components/CircleButton';
 const Token = (props) => {
   return (
     <TokenContainer>
@@ -61,7 +61,7 @@ const Token = (props) => {
                   </svg>
                   14
                 </Button>
-                <IconButton>
+                <CircleButton>
                   <svg
                     viewBox="0 0 14 4"
                     fill="none"
@@ -74,7 +74,7 @@ const Token = (props) => {
                       fill="currentColor"
                     ></path>
                   </svg>
-                </IconButton>
+                </CircleButton>
               </Title>
               <MiniTitle>
                 <NFTText

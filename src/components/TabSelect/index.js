@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { AvatarItem } from '../AvatarItem';
 import { AvatarEthItem } from '../AvatarEthItem';
+import { NotFoundBid } from '../NotFoundBid';
 const WholeTab = styled.div`
   margin: 32px 0px 0px;
   padding: 0px 16px;
@@ -33,20 +34,7 @@ export const TabSelect = () => {
     {
       name: 'tab1',
       label: 'Bids',
-      content: (
-        <svg
-          viewBox="0 0 12 16"
-          fill="none"
-          width="38"
-          height="38"
-          xlmns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M7.00146 0V6H11.0015L4.00146 16V10H0.00146484L7.00146 0Z"
-            fill="currentColor"
-          ></path>
-        </svg>
-      ),
+      content: <NotFoundBid />,
     },
     {
       name: 'tab2',

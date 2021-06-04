@@ -8,7 +8,7 @@ import {
   Cardwrapper,
 } from './style';
 import { Button } from '../../../components/Button';
-import { IconButton } from '../../../components/IconButton';
+import { CircleButton } from '../../../components/CircleButton';
 import { NFTText } from '../../../components/styles';
 import { TabSelect } from '../../../components/TabSelect';
 import { LikeCard } from '../../../components/LikeCard';
@@ -62,7 +62,7 @@ const Items = () => {
             <Button variant="transparent">
               <span>Edit profile</span>
             </Button>
-            <IconButton>
+            <CircleButton>
               <svg
                 viewBox="0 0 15 16"
                 fill="none"
@@ -77,8 +77,8 @@ const Items = () => {
                   fill="currentColor"
                 ></path>
               </svg>
-            </IconButton>
-            <IconButton>
+            </CircleButton>
+            <CircleButton>
               <svg
                 viewBox="0 0 14 4"
                 fill="none"
@@ -93,7 +93,7 @@ const Items = () => {
                   fill="currentColor"
                 ></path>
               </svg>
-            </IconButton>
+            </CircleButton>
           </div>
         </Pofilewrapper>
         <Cardwrapper>

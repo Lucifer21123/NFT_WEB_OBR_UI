@@ -22,6 +22,10 @@ const IconStyle = styled.button`
   },
   transition: all 0.3s ease,
 `;
-export const IconButton = (props) => {
-  return <IconStyle>{props.children}</IconStyle>;
+export const CircleButton = (props) => {
+  return (
+    <IconStyle className={props.className || ''} onClick={props.onClick}>
+      {props.children}
+    </IconStyle>
+  );
 };

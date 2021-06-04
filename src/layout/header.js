@@ -8,10 +8,13 @@ import HeaderMenu from './HeaderMenu.js';
 import HeaderButtons from './HeaderButtons.js';
 import { HeaderWrapper } from './styles';
 import theme from '../theme';
+import { CircleButton } from '../components/CircleButton';
 
-import logoImage from '../assets/img/svgs/logo.svg';
+import LogoImage from '../assets/img/svgs/logo.svg';
+import Menu from '../assets/img/svgs/menu.svg';
+import SearchIcon from '../assets/img/svgs/search-icon.svg';
 
-const Header = () => {
+const Header = ({ mobileMenuOpened, setMobileMenuOpened }) => {
   const below900 = useMedia('(max-width: 900px)');
   const below480 = useMedia('(max-width: 480px)');
 
@@ -25,7 +28,7 @@ const Header = () => {
             className="header-container nft-container"
           >
             <NavLink to="/" className="logo-wrapper">
-              <img src={logoImage} />
+              <img src={LogoImage} />
             </NavLink>
             <SearchForm />
             <HeaderMenu />
@@ -33,7 +36,7 @@ const Header = () => {
           </FlexLayout>
         </HeaderWrapper>
       )}
-      {!below480 && (
+      {below900 && !below480 && (
         <HeaderWrapper>
           <FlexLayout
             width="100%"
@@ -42,7 +45,7 @@ const Header = () => {
             className="header-container nft-container"
           >
             <NavLink to="/" className="logo-wrapper">
-              <img src={logoImage} />
+              <img src={LogoImage} />
             </NavLink>
             <SearchForm />
           </FlexLayout>
@@ -57,7 +60,7 @@ const Header = () => {
           </FlexLayout>
         </HeaderWrapper>
       )}
-      {below480 && (
+      {below900 && below480 && (
         <HeaderWrapper>
           <FlexLayout
             width="100%"
@@ -66,25 +69,20 @@ const Header = () => {
             className="header-container nft-container"
           >
             <NavLink to="/" className="logo-wrapper">
-              <img src={logoImage} />
+              <img src={LogoImage} />
             </NavLink>
-            <SearchForm />
-          </FlexLayout>
-          <FlexLayout
-            width="100%"
-            backgroundColor={theme.bgMain}
-            justify="space-between"
-            className="header-container nft-container"
-          >
-            <HeaderMenu />
-          </FlexLayout>
-          <FlexLayout
-            width="100%"
-            backgroundColor={theme.bgMain}
-            justify="space-between"
-            className="header-container nft-container"
-          >
-            <HeaderButtons />
+            <FlexLayout>
+              <CircleButton className="mr-2">
+                <img src={SearchIcon} alt={'search'} />
+              </CircleButton>
+              <CircleButton
+                onClick={() => {
+                  setMobileMenuOpened(true);
+                }}
+              >
+                <img src={Menu} alt={'menu'} />
+              </CircleButton>
+            </FlexLayout>
           </FlexLayout>
         </HeaderWrapper>
       )}
