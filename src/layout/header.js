@@ -12,11 +12,12 @@ import theme from '../theme';
 import logoImage from '../assets/img/svgs/logo.svg';
 
 const Header = () => {
-  const width900 = useMedia('(max-width: 900px)');
+  const below900 = useMedia('(max-width: 900px)');
+  const below480 = useMedia('(max-width: 480px)');
 
   return (
     <>
-      {!width900 && (
+      {!below900 && (
         <HeaderWrapper>
           <FlexLayout
             width="100%"
@@ -32,7 +33,7 @@ const Header = () => {
           </FlexLayout>
         </HeaderWrapper>
       )}
-      {width900 && (
+      {!below480 && (
         <HeaderWrapper>
           <FlexLayout
             width="100%"
@@ -52,6 +53,37 @@ const Header = () => {
             className="header-container nft-container"
           >
             <HeaderMenu />
+            <HeaderButtons />
+          </FlexLayout>
+        </HeaderWrapper>
+      )}
+      {below480 && (
+        <HeaderWrapper>
+          <FlexLayout
+            width="100%"
+            justify="space-between"
+            margin="0 0 8px 0"
+            className="header-container nft-container"
+          >
+            <NavLink to="/" className="logo-wrapper">
+              <img src={logoImage} />
+            </NavLink>
+            <SearchForm />
+          </FlexLayout>
+          <FlexLayout
+            width="100%"
+            backgroundColor={theme.bgMain}
+            justify="space-between"
+            className="header-container nft-container"
+          >
+            <HeaderMenu />
+          </FlexLayout>
+          <FlexLayout
+            width="100%"
+            backgroundColor={theme.bgMain}
+            justify="space-between"
+            className="header-container nft-container"
+          >
             <HeaderButtons />
           </FlexLayout>
         </HeaderWrapper>
