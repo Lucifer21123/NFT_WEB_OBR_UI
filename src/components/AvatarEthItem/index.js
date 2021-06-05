@@ -94,6 +94,11 @@ export const SpanText = styled.div`
   line-height: 20.7px;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.5);
+  & span {
+    font-size: 15px;
+    line-height: 20.7px;
+    font-weight: 700;
+  }
 `;
 
 export const AvatarEthItem = (props) => {

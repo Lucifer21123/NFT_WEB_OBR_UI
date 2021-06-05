@@ -36,15 +36,8 @@ const Connect = () => {
               </CustomSvg>
               <span>Go back</span>
             </CustomButton>
-            <NFTText
-              fontSize="36px"
-              fontWeight="900"
-              margin="20px 0 10px 0"
-              align="left"
-              fontFamily="Helvetica"
-            >
-              Connect your wallet
-            </NFTText>
+            <span className="headertext">Create collectible</span>
+
             <NFTText
               color="rgba(255,255,255,0.5)"
               margin="16px 0 0"

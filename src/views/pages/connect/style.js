@@ -7,7 +7,12 @@ export const Container = styled.div`
   min-height: 100vh;
 `;
 export const LeftFrom = styled.div`
-  width: 380px;
+  @media (max-width: 768px) {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    width: 380px;
+  }
   background-image: url('https://rarible.com/static/3bd3dce3665cb2869ec24c0c38a8e086.jpg');
   background-size: cover;
   display: flex;
@@ -26,6 +31,13 @@ export const ConnectBody = styled.div`
   padding: 0px 100px;
   display: flex;
   flex-direction: column;
+  & .headertext {
+    font-size: 36px;
+    font-weight: 900;
+    margin: 20px 0 10px 0;
+    text-align: left;
+    font-family: Helvetica;
+  }
 `;
 export const WalletCardGroup = styled.div`
   margin: 32px 0px 0px;

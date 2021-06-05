@@ -11,7 +11,7 @@ export const TokenContainer = styled.div`
 export const VideoLayout = styled.div`
   position: fixed;
   bottom: 0px;
-  right: 515px;
+  right: 545px;
   left: 0px;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   height: 100%;
@@ -26,12 +26,14 @@ export const VideoItem = styled.div`
 
 export const VideoContainer = styled.video`
   height: 100%;
-
   visibility: visible;
   left: 0px;
   opacity: 1;
   border-radius: 6px;
   max-width: 100%;
+  @media (max-width: 425px) {
+    width: 100%;
+  }
 `;
 
 export const DetailItem = styled.div`

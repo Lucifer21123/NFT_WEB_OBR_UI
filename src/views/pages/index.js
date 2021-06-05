@@ -42,7 +42,11 @@ const App = ({ match }) => {
           />
           <Route
             path={`${match.url}/token/:id`}
-            render={(props) => <Token {...props} />}
+            render={(props) => (
+              <MainLayout>
+                <Token {...props} />
+              </MainLayout>
+            )}
           />
           <Route
             exacts

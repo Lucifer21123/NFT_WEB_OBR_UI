@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { NFTText } from '../styles';
+
 export const CreatorItem = styled.div`
   display: flex;
   flex-direction: row;

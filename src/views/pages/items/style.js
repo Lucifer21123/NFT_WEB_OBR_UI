@@ -76,14 +76,19 @@ export const Pofilewrapper = styled.div`
       padding: 0px;
       background: transparent;
       border: none;
+      &:focus {
+        outline: none;
+      }
     }
   }
   & .buttonwrapper {
     display: flex;
     flex-flow: row;
+    margin: 16px 0px 0px;
   }
 `;
 export const Cardwrapper = styled.div`
   display: flex;
   flex-flow: column;
+  margin: 32px 0px 0px;
 `;

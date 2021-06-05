@@ -14,13 +14,14 @@ const IconStyle = styled.button`
   justify-content: center;
   border-radius: 40px;
   transform-origin: center;
+  margin: 0px 0px 0px 8px;
   &:focus {
     outline: none;
-  },
-  &:active { 
+  }
+  &:active {
     transform: 'scale(0.95)';
-  },
-  transition: all 0.3s ease,
+  }
+  transition: all 0.3s ease;
 `;
 export const CircleButton = (props) => {
   return (

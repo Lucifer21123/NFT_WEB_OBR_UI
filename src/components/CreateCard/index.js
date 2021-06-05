@@ -50,7 +50,6 @@ const RibbonButton = styled.button`
   right: -13px;
   top: -18px;
   position: absolute;
-  outline: none;
   border-radius: 32px;
   display: inline-flex;
   -webkit-box-align: center;
@@ -69,6 +68,13 @@ const RibbonButton = styled.button`
     line-height: 19.32px;
     text-decoration: none;
   }
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    transform: 'scale(0.95)';
+  }
+  transition: all 0.3s ease;
 `;
 
 export const CreateCard = (props) => {

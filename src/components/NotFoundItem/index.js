@@ -11,13 +11,32 @@ const ItemStyle = styled.div`
     color: inheit;
   }
 `;
+
 export const NotFoundItem = (props) => {
   return (
     <ItemStyle>
-      <NFTText>No items found</NFTText>
-      <NFTText>Come back soon! Or try to browse</NFTText>
-      <NFTText>something for you on our marketplace</NFTText>
-      <Button varient="lightblue">Browse marketplace</Button>
+      <NFTText fontSize=" 26px" margin="8px 0px 0px">
+        No items found
+      </NFTText>
+      <NFTText
+        fontSize="18px"
+        fontWeight="500"
+        align=" center"
+        color="rgba(255, 255, 255, 0.5)"
+        margin="8px 0px 0px"
+      >
+        Come back soon! Or try to browse
+      </NFTText>
+      <NFTText
+        fontSize="18px"
+        fontWeight="500"
+        align=" center"
+        color="rgba(255, 255, 255, 0.5)"
+        margin="8px 0px 16px 0px"
+      >
+        something for you on our marketplace
+      </NFTText>
+      <Button variant="lightBlue">Browse marketplace</Button>
     </ItemStyle>
   );
 };
