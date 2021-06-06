@@ -10,6 +10,7 @@ import { Button } from '../../components/Button';
 
 import { liveData } from '../../constants/menus';
 import LiveCard from '../../components/SlickSlider/SlickCard/LiveCard';
+import { BiSlider } from 'react-icons/bi';
 
 const data = [
   {
@@ -121,19 +122,17 @@ const ExploreSection = ({ toggle }) => {
           {ButtonData.map((item, key) => {
             return (
               <div className="ButtonContainer" key={key}>
-                <Button variant={item.variant}>
-                  <span>{item.id}</span>
+                <Button variant={item.variant} size="big">
+                  {item.id}
                 </Button>
               </div>
             );
           })}
         </div>
         <div className="FilterButtonArea">
-          <DropdownMenu
-            list={data}
-            click={Click}
-            label="Filter & Sort"
-          ></DropdownMenu>
+          <DropdownMenu list={data} click={Click} radius="border-radius:48px;">
+            <BiSlider></BiSlider> Filter & Sort
+          </DropdownMenu>
         </div>
       </ExploreHeaderSection>
       <CardContainer>

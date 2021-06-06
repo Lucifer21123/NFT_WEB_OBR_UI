@@ -48,6 +48,12 @@ export const StyledButton = styled.button(
         border: 'none',
         '&:hover': { bg: theme.bgLightBlueHover },
       },
+      white: {
+        color: 'black',
+        bg: 'white',
+        border: 'none',
+        '&:hover': { bg: theme.colorWhite },
+      },
       transparent: {
         color: theme.colorWhite,
         bg: theme.transparent,
