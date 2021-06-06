@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import { NFTText } from '../../../components/styles';
-import theme from '../../../theme';
+import { NFTText } from '../../components/styles';
+import theme from '../../theme';
 import {
   HeroWrapper,
   HeroItemWrapper,

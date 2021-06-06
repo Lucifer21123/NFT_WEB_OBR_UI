@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setTokenData } from '../../../redux/actions';
+import { setTokenData } from '../../redux/actions';
 import {
   Container,
   CustomButton,
@@ -9,8 +9,8 @@ import {
   ContainerBody,
   SubContainer,
 } from './style';
-import { NFTText } from '../../../components/styles';
-import { CreateCard } from '../../../components/CreateCard';
+import { NFTText } from '../../components/styles';
+import { CreateCard } from '../../components/CreateCard';
 const Create = ({ tokenData, setTokenData }) => {
   return (
     <Container>

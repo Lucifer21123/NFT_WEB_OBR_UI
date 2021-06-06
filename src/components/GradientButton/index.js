@@ -54,7 +54,6 @@ const StyledButton = styled.button`
 `;
 
 const GradientButton = ({ onClick, toggle, children }) => {
-  console.log(toggle);
   return (
     <StyledButton onClick={onClick} toggle={toggle}>
       {children}

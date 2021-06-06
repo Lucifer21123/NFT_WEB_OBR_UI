@@ -20,11 +20,11 @@ import {
   FooterLeft,
   FooterRight,
 } from './style';
-import { NFTText } from '../../../components/styles';
-import { Button } from '../../../components/Button';
-import { AvatarItem } from '../../../components/AvatarItem';
-import { TabSelect } from '../../../components/TabSelect';
-import { CircleButton } from '../../../components/CircleButton';
+import { NFTText } from '../../components/styles';
+import { Button } from '../../components/Button';
+import { AvatarItem } from '../../components/AvatarItem';
+import { TabSelect } from '../../components/TabSelect';
+import { CircleButton } from '../../components/CircleButton';
 const Token = (props) => {
   return (
     <TokenContainer>

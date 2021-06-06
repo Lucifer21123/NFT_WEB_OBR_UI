@@ -1,15 +1,15 @@
 import React from 'react';
 
-import DropDown from '../../../components/Dropdown';
+import DropDown from '../../components/Dropdown';
 import { TopCustomerWrapper } from './styles';
 import {
   languageMenu,
   seller,
   sellersDrop,
   daysDrop,
-} from '../../../constants/menus';
+} from '../../constants/menus';
 
-import SellerCellGrid from '../../../components/TopSellerGrid';
+import SellerCellGrid from '../../components/TopSellerGrid';
 
 const TopCustomer = () => {
   const clickHandle = (val) => {

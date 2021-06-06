@@ -7,11 +7,11 @@ import {
   Pofilewrapper,
   Cardwrapper,
 } from './style';
-import { Button } from '../../../components/Button';
-import { CircleButton } from '../../../components/CircleButton';
-import { NFTText } from '../../../components/styles';
-import { TabSelect } from '../../../components/TabSelect';
-import { LikeCard } from '../../../components/LikeCard';
+import { Button } from '../../components/Button';
+import { CircleButton } from '../../components/CircleButton';
+import { NFTText } from '../../components/styles';
+import { TabSelect } from '../../components/TabSelect';
+import { LikeCard } from '../../components/LikeCard';
 const Items = () => {
   return (
     <Container>

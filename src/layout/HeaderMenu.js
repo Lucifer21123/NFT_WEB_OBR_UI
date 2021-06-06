@@ -11,7 +11,7 @@ const menus = [
   {
     id: 'myitems',
     label: 'My items',
-    to: '/myitems',
+    to: '/items',
   },
 ];
 

@@ -9,9 +9,9 @@ import {
   WhatButton,
 } from './style';
 import { CustomButton, CustomSvg } from '../create/style';
-import { NFTText } from '../../../components/styles';
-import { WalletCard } from '../../../components/WalletCard';
-import { cardlist } from '../../../constants/cardlist';
+import { NFTText } from '../../components/styles';
+import { WalletCard } from '../../components/WalletCard';
+import { cardlist } from '../../constants/cardlist';
 const Connect = () => {
   return (
     <Container>

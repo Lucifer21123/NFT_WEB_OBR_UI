@@ -5,11 +5,11 @@ import {
   CardGridArea,
 } from './styles';
 import React, { useState, useEffect } from 'react';
-import DropdownMenu from '../../../components/DropdownMenu/index';
-import { Button } from '../../../components/Button';
+import DropdownMenu from '../../components/DropdownMenu/index';
+import { Button } from '../../components/Button';
 
-import { liveData } from '../../../constants/menus';
-import LiveCard from '../../../components/SlickSlider/SlickCard/LiveCard';
+import { liveData } from '../../constants/menus';
+import LiveCard from '../../components/SlickSlider/SlickCard/LiveCard';
 
 const data = [
   {
@@ -93,7 +93,7 @@ const ExploreSection = ({ toggle }) => {
         <div className="ExploreButtonGroupArea nft-scrollbar">
           {ButtonData.map((item, key) => {
             return (
-              <Button variant={item.variant}>
+              <Button variant={item.variant} key={key}>
                 <span>{item.id}</span>
               </Button>
             );

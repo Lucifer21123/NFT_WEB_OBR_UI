@@ -1,7 +1,7 @@
 import React from 'react';
 import { LiveAuctionsWrapper } from './styles';
-import { hotdata } from '../../../constants/menus';
-import SlickSlider from '../../../components/SlickSlider/index';
+import { liveData } from '../../constants/menus';
+import SlickSlider from '../../components/SlickSlider/index';
 const settings = {
   dots: false,
   infinite: false,
@@ -35,15 +35,19 @@ const settings = {
   ],
 };
 
-const HotCollections = () => {
+const LiveAuctions = () => {
   return (
     <LiveAuctionsWrapper>
       <h3>
-        <b>Hot collections 💥</b>
+        <b>Live auctions 🔥</b>
       </h3>
-      <SlickSlider type="hot" list={hotdata} settings={settings}></SlickSlider>
+      <SlickSlider
+        type="live"
+        list={liveData}
+        settings={settings}
+      ></SlickSlider>
     </LiveAuctionsWrapper>
   );
 };
 
-export default HotCollections;
+export default LiveAuctions;

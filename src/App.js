@@ -6,16 +6,15 @@ import {
   Switch,
   Redirect,
 } from 'react-router-dom';
+import AppLayout from './layout/AppLayout';
+import MainLayout from './layout/MainLayout';
 
-const ViewMain = React.lazy(() =>
-  import('./views')
-);
-const ViewPage = React.lazy(() =>
-  import('./views/pages')
-);
-const ViewError = React.lazy(() =>
-  import('./views/error')
-);
+const Dashboard = React.lazy(() => import('./pages/explore'));
+const Create = React.lazy(() => import('./pages/create'));
+const Connect = React.lazy(() => import('./pages/connect'));
+const Token = React.lazy(() => import('./pages/token'));
+const Items = React.lazy(() => import('./pages/items'));
+const ErrorPage = React.lazy(() => import('./pages/error'));
 
 class App extends React.Component {
   constructor(props) {
@@ -25,29 +24,63 @@ class App extends React.Component {
   render() {
     return (
       <div className="h-100">
-        {
-          <Suspense fallback={<div className="loading" />}>
-            <Router>
-              <Switch>
-                <Route
-                  path="/pages"
-                  render={(props) => <ViewPage {...props} />}
-                />
-                <Route
-                  path="/error"
-                  exact
-                  render={(props) => <ViewError {...props} />}
-                />
-                <Route
-                  path="/"
-                  exact
-                  render={(props) => <ViewMain {...props} />}
-                />
-                <Redirect to="/error" />
-              </Switch>
-            </Router>
-          </Suspense>
-        }
+        <Suspense fallback={<div className="loading" />}>
+          <Router>
+            <Switch>
+              <Redirect exact from={`/`} to={`/explore`} />
+              <Route
+                path={`/explore`}
+                render={(props) => (
+                  <AppLayout>
+                    <Dashboard {...props} />
+                  </AppLayout>
+                )}
+              />
+              <Route
+                path={`/create`}
+                render={(props) => (
+                  <AppLayout>
+                    <Create {...props} />
+                  </AppLayout>
+                )}
+              />
+              <Route
+                path={`/connect`}
+                render={(props) => <Connect {...props} />}
+              />
+              <Route
+                path={`/token/:id`}
+                render={(props) => (
+                  <MainLayout>
+                    <Token {...props} />
+                  </MainLayout>
+                )}
+              />
+              <Route
+                exacts
+                strict
+                path={`/items`}
+                render={(props) => (
+                  <AppLayout>
+                    <Items {...props} />
+                  </AppLayout>
+                )}
+              />
+              <Route
+                exacts
+                strict
+                path={`/error`}
+                render={(props) => (
+                  <AppLayout>
+                    <ErrorPage {...props} />
+                  </AppLayout>
+                )}
+              />
+
+              <Redirect to="/error" />
+            </Switch>
+          </Router>
+        </Suspense>
       </div>
     );
   }
@@ -58,8 +91,7 @@ const mapStateToProps = ({ settings }) => {
   return { locale, countryCode };
 };
 const mapActionsToProps = (dispatch) => {
-  return {
-  };
+  return {};
 };
 
 export default connect(mapStateToProps, mapActionsToProps)(App);
