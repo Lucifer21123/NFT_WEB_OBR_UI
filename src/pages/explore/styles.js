@@ -100,6 +100,7 @@ export const ExploreHeaderSection = styled.div`
     flex: 1;
     overflow-x: scroll;
     margin-right: -10px;
+    padding-right: 20px;
     & .ButtonContainer {
       margin-right: 10px;
     }
@@ -121,7 +122,7 @@ export const CardContainer = styled.div`
 `;
 
 export const CardGridArea = styled.div`
-  padding: 10px;
+  padding-top: 10px;
   width: 25%;
   @media screen and (max-width: 1323px) {
     width: 25%;

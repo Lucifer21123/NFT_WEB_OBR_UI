@@ -2,12 +2,13 @@ import React from 'react';
 import { Row, Col } from 'reactstrap';
 
 import { FlexLayout, NFTText } from '../components/styles';
-import { FooterWrapper } from './styles';
-import theme from '../theme';
+import { FooterWrapper, FooterPolicy } from './styles';
 import EmailForm from '../components/EmailForm';
 import FooterMenu from './FooterMenu';
 import { raribleMenus, communityMenus, languageMenu } from '../constants/menus';
 import LanguageSelect from '../components/LanguageSelect';
+import { FiTwitter } from 'react-icons/fi';
+import { GrInstagram } from 'react-icons/gr';
 
 const Footer = () => {
   return (
@@ -86,8 +87,47 @@ const Footer = () => {
             </Row>
           </Col>
         </Row>
-        <Row>
-          <FlexLayout></FlexLayout>
+        <Row className="w-100">
+          <FlexLayout
+            width="100%"
+            justify="space-between"
+            direction="row"
+            margin="20px 0px"
+          >
+            <FooterPolicy>
+              <div className="boxes">
+                <div className="terms">
+                  <span>Terms</span>
+                  <span>Privacy</span>
+                </div>
+                <div className="icongroup">
+                  <div className="icongroupContainer">
+                    <span>
+                      <FiTwitter></FiTwitter>
+                    </span>
+                    <span>
+                      <GrInstagram></GrInstagram>
+                    </span>
+                    <span>
+                      <FiTwitter></FiTwitter>
+                    </span>
+                    <span>
+                      <GrInstagram></GrInstagram>
+                    </span>
+                    <span>
+                      <FiTwitter></FiTwitter>
+                    </span>
+                    <span>
+                      <GrInstagram></GrInstagram>
+                    </span>
+                  </div>
+                </div>
+                <div className="copyright">
+                  <span>© Rarible, Inc. All rights reserved.</span>
+                </div>
+              </div>
+            </FooterPolicy>
+          </FlexLayout>
         </Row>
       </FlexLayout>
     </FooterWrapper>

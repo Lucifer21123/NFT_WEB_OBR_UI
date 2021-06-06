@@ -34,3 +34,84 @@ export const FooterWrapper = styled.footer`
   border-top: 1px solid ${theme.transparentBorder};
   padding-top: 64px;
 `;
+
+export const FooterPolicy = styled.div`
+  width: 100%;
+  span {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 900;
+    cusor: pointer;
+    :hover {
+      color: white;
+    }
+  }
+  & .boxes {
+    & div {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    & .terms {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      padding-left: 50px;
+      & span {
+        margin-right: 30px;
+      }
+      @media screen and (max-width: 768px) {
+        padding-left: 0px;
+        justify-content: center;
+        flex: 1;
+        text-align: center;
+      }
+    }
+    & .icongroup {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      & .icongroupContainer {
+        width: 230px;
+
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 768px) {
+          justify-content: space-between;
+          text-align: center;
+          width: 230px;
+        }
+      }
+    }
+    & .copyright {
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+      @media screen and (max-width: 768px) {
+        justify-content: center;
+        flex: 1;
+        text-align: center;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    & .boxes {
+      display: grid;
+      grid-template-columns: 20% 60% 20%;
+    }
+
+    & .boxes div:nth-of-type(1) {
+      order: 2;
+    }
+
+    & .boxes div:nth-of-type(2) {
+      order: 3;
+    }
+
+    & .boxes div:nth-of-type(3) {
+      order: 1;
+    }
+  }
+`;
