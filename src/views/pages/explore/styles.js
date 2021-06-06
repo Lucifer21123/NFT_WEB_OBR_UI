@@ -72,7 +72,59 @@ export const LiveAuctionsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 28px 0px 0px;
+  margin-bottom: 30px;
   h3 {
     display: flex;
+  }
+`;
+
+export const ExploreSectionWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+`;
+
+export const ExploreHeaderSection = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 1;
+
+  h3 {
+    margin-right: 15px;
+    margin-bottom: 20px;
+  }
+
+  & .ExploreButtonGroupArea {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    overflow-x: scroll;
+  }
+
+  & .FilterButtonArea {
+    display: flex;
+    justify-content: flex-start;
+    width: 200px;
+  }
+`;
+
+export const CardContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`;
+
+export const CardGridArea = styled.div`
+  padding: 10px;
+  width: 25%;
+  @media screen and (max-width: 1323px) {
+    width: 25%;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 50%;
+  }
+  @media screen and (max-width: 430px) {
+    width: 100%;
   }
 `;

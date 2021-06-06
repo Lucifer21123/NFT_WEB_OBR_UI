@@ -27,11 +27,14 @@ const StyledDropDownDiv = styled.div`
 `;
 const StyledDropDownHeader = styled.div`
   cursor: pointer;
-  h3 {
-    color: ${theme.textBlue};
+  p {
+    font-color: white;
     font-weight: bold;
+    margin-bottom: 0px;
+    font-size: 20px;
   }
-  height: 48px;
+  align-items: center;
+  height: 42px;
   padding: 0 15px;
   padding-bottom: 10px;
   margin-right: 12px;
@@ -39,31 +42,15 @@ const StyledDropDownHeader = styled.div`
   font-weight: bold;
   display: flex;
   align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
   img {
     height: 28px;
     margin-right: 12px;
   }
-  :after {
-    border: 2px solid white;
-    border-radius: 2px;
-    border-right: 0;
-    border-top: 0;
-    content: ' ';
-    display: block;
-    margin-top: -0.5em;
-    pointer-events: none;
-    position: absolute;
-    top: 50%;
-    transform: rotate(-45deg);
-    transform-origin: center;
-    height: 10px;
-    width: 10px;
-    top: 25px;
-    right: 10px;
-    transition: border-color 0.15s ease-in-out;
-  }
 
   &:hover {
+    border: 1px solid rgba(255, 255, 255, 0.9);
   }
 `;
 
@@ -96,7 +83,7 @@ const StyledDropDownItemDiv = styled.div`
     border-right: 2px solid ${theme.textBlue};
   }
 `;
-const Dropdown = ({ list, label, click }) => {
+const DropdownMenu = ({ list, click, label }) => {
   const [current, setCurrent] = useState({});
   const [hide, setHide] = useState(false);
   const dropMenuRef = useRef(null);
@@ -126,7 +113,7 @@ const Dropdown = ({ list, label, click }) => {
   return (
     <StyledDropDown>
       <StyledDropDownHeader onClick={() => setHide(!hide)}>
-        <h3>{current.label}</h3>
+        <p>{current.label}</p>
       </StyledDropDownHeader>
       <StyledDropDownDiv ref={dropMenuRef} hide={hide}>
         {list.map((item, index) => {
@@ -150,4 +137,4 @@ const Dropdown = ({ list, label, click }) => {
   );
 };
 
-export default Dropdown;
+export default DropdownMenu;

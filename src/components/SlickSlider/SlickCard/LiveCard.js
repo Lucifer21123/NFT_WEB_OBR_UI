@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { CircleButton } from '../../CircleButton';
+const LiveCardWrapper = styled.div`
+  width: 100%;
+  padding: 10px;
+`;
+
 const LiveCardArea = styled.div`
   background: rgb(18, 18, 18);
   padding: 18px;
@@ -13,8 +18,6 @@ const LiveCardArea = styled.div`
   min-height: 0px;
   min-width: 0px;
   max-width: 100%;
-  margin-left: 15px;
-  margin-right: 15px;
   @media (min-width: 981px) {
     padding: 22px 24px;
   }
@@ -132,65 +135,67 @@ const CommentText = styled.button`
 
 const LiveCard = ({ data }) => {
   return (
-    <LiveCardArea>
-      <ImageHeader>
-        <ImageContainer>
-          <ImageBody>
-            <img src={data.badgeSrc1} />
-          </ImageBody>
-          <ImageBody>
-            <img src={data.badgeSrc2} style={{ left: '14px' }} />
-          </ImageBody>
-          <ImageBody>
-            <img src={data.badgeSrc3} style={{ left: '28px' }} />
-          </ImageBody>
-          <CircleButton>
-            <svg
-              viewBox="0 0 14 4"
-              fill="none"
-              width="13.200000000000001"
-              height="13.200000000000001"
-              xlmns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z"
-                fill="currentColor"
-              ></path>
-            </svg>
-          </CircleButton>
-        </ImageContainer>
-      </ImageHeader>
-      <ImageCard>
-        <img src={data.imageSrc} />
-      </ImageCard>
-      <TitleContainer>
-        <a href={data.href}>{data.title}</a>
-      </TitleContainer>
-      <BidContainer>
-        <span>Highest bid {data.bids}</span>
-        <CommentContainer>
-          <span>{data.price} wETH</span>
-          <CommentText>
-            <svg
-              viewBox="0 0 17 16"
-              fill="none"
-              width="16"
-              height="16"
-              xlmns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z"
-                stroke="rgba(255, 255, 255, 1)"
-                strokeWidth="2"
-              ></path>
-            </svg>
-            <p>{data.comment}</p>
-          </CommentText>
-        </CommentContainer>
-      </BidContainer>
-    </LiveCardArea>
+    <LiveCardWrapper>
+      <LiveCardArea>
+        <ImageHeader>
+          <ImageContainer>
+            <ImageBody>
+              <img src={data.badgeSrc1} />
+            </ImageBody>
+            <ImageBody>
+              <img src={data.badgeSrc2} style={{ left: '14px' }} />
+            </ImageBody>
+            <ImageBody>
+              <img src={data.badgeSrc3} style={{ left: '28px' }} />
+            </ImageBody>
+            <CircleButton>
+              <svg
+                viewBox="0 0 14 4"
+                fill="none"
+                width="13.200000000000001"
+                height="13.200000000000001"
+                xlmns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </CircleButton>
+          </ImageContainer>
+        </ImageHeader>
+        <ImageCard>
+          <img src={data.imageSrc} />
+        </ImageCard>
+        <TitleContainer>
+          <a href={data.href}>{data.title}</a>
+        </TitleContainer>
+        <BidContainer>
+          <span>Highest bid {data.bids}</span>
+          <CommentContainer>
+            <span>{data.price} wETH</span>
+            <CommentText>
+              <svg
+                viewBox="0 0 17 16"
+                fill="none"
+                width="16"
+                height="16"
+                xlmns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.2112 14L12.1056 9.69231L14.1853 7.39185C15.2497 6.21455 15.3683 4.46116 14.4723 3.15121V3.15121C13.3207 1.46757 10.9637 1.15351 9.41139 2.47685L8.2112 3.5L6.95566 2.42966C5.40738 1.10976 3.06841 1.3603 1.83482 2.97819V2.97819C0.777858 4.36443 0.885104 6.31329 2.08779 7.57518L8.2112 14Z"
+                  stroke="rgba(255, 255, 255, 1)"
+                  strokeWidth="2"
+                ></path>
+              </svg>
+              <p>{data.comment}</p>
+            </CommentText>
+          </CommentContainer>
+        </BidContainer>
+      </LiveCardArea>
+    </LiveCardWrapper>
   );
 };
 export default LiveCard;

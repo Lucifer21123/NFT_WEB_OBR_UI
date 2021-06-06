@@ -8,14 +8,26 @@ import { DashboardWrapper } from './styles';
 import TopCustomer from './topcustomer';
 import LiveAuctions from './liveauctions';
 import HotCollections from './hotcollections';
+import ExploreSection from './Explore';
+import GradientButton from '../../../components/GradientButton';
 
 const Dashboard = ({ tokenData, setTokenData }) => {
+  const [open, setOpen] = useState(false);
+
+  const onGradiendButtonClick = () => {
+    setOpen(!open);
+    console.log(open);
+  };
   return (
     <DashboardWrapper>
       <Hero heroList={heroList} />
       <TopCustomer />
       <LiveAuctions />
       <HotCollections></HotCollections>
+      <ExploreSection toggle={open}></ExploreSection>
+      <GradientButton onClick={onGradiendButtonClick} toggle={!open}>
+        Load More
+      </GradientButton>
     </DashboardWrapper>
   );
 };
