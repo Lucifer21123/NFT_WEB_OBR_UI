@@ -41,7 +41,12 @@ const HotCollections = () => {
       <h3>
         <b>Hot collections 💥</b>
       </h3>
-      <SlickSlider type="hot" list={hotdata} settings={settings}></SlickSlider>
+      <SlickSlider
+        type="hot"
+        list={hotdata}
+        settings={settings}
+        arrowPosition="-10px"
+      ></SlickSlider>
     </LiveAuctionsWrapper>
   );
 };

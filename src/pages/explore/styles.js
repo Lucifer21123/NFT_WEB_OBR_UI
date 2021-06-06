@@ -97,15 +97,20 @@ export const ExploreHeaderSection = styled.div`
 
   & .ExploreButtonGroupArea {
     display: flex;
-    justify-content: space-between;
     flex: 1;
     overflow-x: scroll;
+    margin-right: -10px;
+    & .ButtonContainer {
+      margin-right: 10px;
+    }
   }
 
   & .FilterButtonArea {
     display: flex;
-    justify-content: flex-start;
-    width: 200px;
+    justify-content: flex-end;
+    & div {
+      margin-left: 10px;
+    }
   }
 `;
 

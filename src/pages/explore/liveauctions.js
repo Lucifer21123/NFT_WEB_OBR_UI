@@ -45,6 +45,7 @@ const LiveAuctions = () => {
         type="live"
         list={liveData}
         settings={settings}
+        arrowPosition="-10px"
       ></SlickSlider>
     </LiveAuctionsWrapper>
   );

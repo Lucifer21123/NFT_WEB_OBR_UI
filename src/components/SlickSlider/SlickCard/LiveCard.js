@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { CircleButton } from '../../CircleButton';
+
 const LiveCardWrapper = styled.div`
   width: 100%;
   padding: 10px;
@@ -28,10 +29,11 @@ const LiveCardArea = styled.div`
 
 const ImageHeader = styled.div`
   display: flex;
-  width: 58px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
+  z-index: 5;
 `;
 
 const ImageContainer = styled.div`
@@ -47,6 +49,7 @@ const ImageBody = styled.div`
   width: 26px;
   height: 26px;
   overflow: hidden;
+
   & img {
     width: 26px;
     height: 26px;
@@ -64,6 +67,7 @@ const ImageCard = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-top: 16px;
+  margin-bottom: 10px;
 `;
 
 const TitleContainer = styled.div`
@@ -76,6 +80,7 @@ const TitleContainer = styled.div`
     white-space: nowrap;
     max-width: 100%;
     overflow: hidden;
+    color: white;
   }
 `;
 
@@ -148,23 +153,23 @@ const LiveCard = ({ data }) => {
             <ImageBody>
               <img src={data.badgeSrc3} style={{ left: '28px' }} />
             </ImageBody>
-            <CircleButton>
-              <svg
-                viewBox="0 0 14 4"
-                fill="none"
-                width="13.200000000000001"
-                height="13.200000000000001"
-                xlmns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </CircleButton>
           </ImageContainer>
+          <CircleButton>
+            <svg
+              viewBox="0 0 14 4"
+              fill="none"
+              width="13.200000000000001"
+              height="13.200000000000001"
+              xlmns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M3.5 2C3.5 2.82843 2.82843 3.5 2 3.5C1.17157 3.5 0.5 2.82843 0.5 2C0.5 1.17157 1.17157 0.5 2 0.5C2.82843 0.5 3.5 1.17157 3.5 2ZM8.5 2C8.5 2.82843 7.82843 3.5 7 3.5C6.17157 3.5 5.5 2.82843 5.5 2C5.5 1.17157 6.17157 0.5 7 0.5C7.82843 0.5 8.5 1.17157 8.5 2ZM11.999 3.5C12.8274 3.5 13.499 2.82843 13.499 2C13.499 1.17157 12.8274 0.5 11.999 0.5C11.1706 0.5 10.499 1.17157 10.499 2C10.499 2.82843 11.1706 3.5 11.999 3.5Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </CircleButton>
         </ImageHeader>
         <ImageCard>
           <img src={data.imageSrc} />

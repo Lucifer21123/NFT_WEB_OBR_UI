@@ -15,26 +15,37 @@ const data = [
   {
     id: 'sort by',
     label: 'sort by',
+    type: 'label',
   },
   {
     id: 'recently added',
     label: 'recently added',
+    type: 'item',
   },
   {
     id: 'Cheapest',
     label: 'Cheapest',
+    type: 'item',
   },
   {
     id: 'hight price',
     label: 'hight price',
-  },
-  {
-    id: 'Verified only',
-    label: 'Verified only',
+    type: 'item',
   },
   {
     id: 'Most liked',
     label: 'Most liked',
+    type: 'item',
+  },
+  {
+    id: 'Options',
+    label: 'Options',
+    type: 'label',
+  },
+  {
+    id: 'Verified only',
+    label: 'Verified only',
+    type: 'item',
   },
 ];
 
@@ -44,31 +55,47 @@ const ButtonData = [
     variant: 'white',
   },
   {
-    id: 'Art',
+    id: '🌈 Art',
     variant: 'transparent',
   },
   {
-    id: 'Game',
+    id: '📸 Photography',
     variant: 'transparent',
   },
   {
-    id: 'Metaverses',
+    id: '👾 Metaverses',
     variant: 'transparent',
   },
   {
-    id: 'Music',
+    id: '🎵 Music',
     variant: 'transparent',
   },
   {
-    id: 'DeFi',
+    id: '💰 DeFi',
     variant: 'transparent',
   },
   {
-    id: 'Mems',
+    id: '🤡 Memes',
     variant: 'transparent',
   },
   {
-    id: 'punks',
+    id: '🤘Punks',
+    variant: 'transparent',
+  },
+  {
+    id: '🤘Punks',
+    variant: 'transparent',
+  },
+  {
+    id: '🎵 Music',
+    variant: 'transparent',
+  },
+  {
+    id: '💰 DeFi',
+    variant: 'transparent',
+  },
+  {
+    id: '💰 DeFi',
     variant: 'transparent',
   },
 ];
@@ -93,14 +120,20 @@ const ExploreSection = ({ toggle }) => {
         <div className="ExploreButtonGroupArea nft-scrollbar">
           {ButtonData.map((item, key) => {
             return (
-              <Button variant={item.variant} key={key}>
-                <span>{item.id}</span>
-              </Button>
+              <div className="ButtonContainer" key={key}>
+                <Button variant={item.variant}>
+                  <span>{item.id}</span>
+                </Button>
+              </div>
             );
           })}
         </div>
         <div className="FilterButtonArea">
-          <DropdownMenu list={data} click={Click}></DropdownMenu>
+          <DropdownMenu
+            list={data}
+            click={Click}
+            label="Filter & Sort"
+          ></DropdownMenu>
         </div>
       </ExploreHeaderSection>
       <CardContainer>

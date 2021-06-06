@@ -21,9 +21,8 @@ const StyledDropDownDiv = styled.div`
   border: 1px solid ${theme.transparentBorder};
   display: ${({ hide }) => (hide ? 'block' : 'none')};
   width: 50%;
-  min-width: 140px;
-  max-height: 200px;
-  overflow: auto;
+  min-width: 200px;
+  max-height: auto;
 `;
 const StyledDropDownHeader = styled.div`
   cursor: pointer;
@@ -35,7 +34,7 @@ const StyledDropDownHeader = styled.div`
   }
   align-items: center;
   height: 42px;
-  padding: 0 15px;
+  padding: 9px 15px;
   padding-bottom: 10px;
   margin-right: 12px;
   text-align: left;
@@ -83,6 +82,24 @@ const StyledDropDownItemDiv = styled.div`
     border-right: 2px solid ${theme.textBlue};
   }
 `;
+
+const StyledDropDownDisableItemDiv = styled.div`
+  color: ${theme.textGray};
+  margin: 0 12px;
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  img {
+    height: 28px;
+    margin-right: 12px;
+  }
+`;
+
 const DropdownMenu = ({ list, click, label }) => {
   const [current, setCurrent] = useState({});
   const [hide, setHide] = useState(false);
@@ -113,11 +130,15 @@ const DropdownMenu = ({ list, click, label }) => {
   return (
     <StyledDropDown>
       <StyledDropDownHeader onClick={() => setHide(!hide)}>
-        <p>{current.label}</p>
+        <p>{label}</p>
       </StyledDropDownHeader>
       <StyledDropDownDiv ref={dropMenuRef} hide={hide}>
         {list.map((item, index) => {
-          return (
+          return item.type == 'label' ? (
+            <StyledDropDownDisableItemDiv>
+              {item.label}
+            </StyledDropDownDisableItemDiv>
+          ) : (
             <StyledDropDownItemDiv
               isSelect={current.id === item.id}
               key={`__key-${index.toString()}`}
